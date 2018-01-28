@@ -16,17 +16,17 @@ function computeLoan(){
 	var interest = ( amount - amount2) / ((1 / (interest_rate / 12 )) * ( 1 - Math.pow( 1 / ( 1 + (interest_rate / 12 )), months ))) + ((amount2) * (interest_rate / 12 ));
 	var payment = (interest).toFixed(2);
 	payment = payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "");
-	document.getElementById('payment').innerHTML = "Първоначална вноска: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+((amount2 / .1 )- amount)+" лв.</b>"+"<hr>Стойност за финансиране: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+(amount )+" лв.</b>"+"<hr>Месечна вноска: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+payment+" лв.</b>"+"  x  "+months+" месеца"+"<hr>Остатък 10%: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+(amount2)+" лв.</b>";
+	document.getElementById('payment').innerHTML = "РџСЉСЂРІРѕРЅР°С‡Р°Р»РЅР° РІРЅРѕСЃРєР°: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+((amount2 / .1 )- amount)+" Р»РІ.</b>"+"<hr>РЎС‚РѕР№РЅРѕСЃС‚ Р·Р° С„РёРЅР°РЅСЃРёСЂР°РЅРµ: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+(amount )+" Р»РІ.</b>"+"<hr>РњРµСЃРµС‡РЅР° РІРЅРѕСЃРєР°: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+payment+" Р»РІ.</b>"+"  x  "+months+" РјРµСЃРµС†Р°"+"<hr>РћСЃС‚Р°С‚СЉРє 10%: <br>"+"<b style=\"font-size:22px;text-shadow: 1px 1px #000;\">"+(amount2)+" Р»РІ.</b>";
 }
 </script>
 </head>
 <body>
 
-<span class="h3" id="h33">144 900лв</span>
+<span class="h3" id="h33">144 900Р»РІ</span>
 <div id="retro">
-<h3><center>Лизингов калкулатор</center></h3>
-<p>Цена без ДДС: <input id="amount1" type="text"  ></p>
-<p>Първоначална вноска: 
+<h3><center>Р›РёР·РёРЅРіРѕРІ РєР°Р»РєСѓР»Р°С‚РѕСЂ</center></h3>
+<p>Р¦РµРЅР° Р±РµР· Р”Р”РЎ: <input id="amount1" type="text"  ></p>
+<p>РџСЉСЂРІРѕРЅР°С‡Р°Р»РЅР° РІРЅРѕСЃРєР°: 
 <select id="amount" type="text">
   <option id="amount" type="text" value=".85">15%</option>
   <option id="amount" type="text" value=".8">20%</option>
@@ -41,8 +41,8 @@ function computeLoan(){
   <option id="amount" type="text" value=".35">65%</option>
   <option id="amount" type="text" value=".30">70%</option>
 </select></p>
-<p style="display:none;">Лихва %: <input id="interest_rate" type="text" value="10.4" name="10.4" ></p>
-<p>Лизингов срок (в месеци):
+<p style="display:none;">Р›РёС…РІР° %: <input id="interest_rate" type="text" value="10.4" name="10.4" ></p>
+<p>Р›РёР·РёРЅРіРѕРІ СЃСЂРѕРє (РІ РјРµСЃРµС†Рё):
 <select id="months" type="text" >
   <option id="months" type="text" value="6">6</option>
   <option  id="months" type="text"value="12">12</option>
@@ -52,14 +52,14 @@ function computeLoan(){
   <option id="months" type="text" value="48">48</option>
   <option id="months" type="text" value="60">60</option>
 </select></p>
-<button id="butcalc" onclick="computeLoan()" >Провери месечната си вноска</button><br>
+<button id="butcalc" onclick="computeLoan()" >РџСЂРѕРІРµСЂРё РјРµСЃРµС‡РЅР°С‚Р° СЃРё РІРЅРѕСЃРєР°</button><br>
 <div id="ret"><h2 id="payment" style="   font-size: 14px !important;font-weight: normal !important;" ></h2></div>
 <hr>
-<p style="font-size:12px;">* Цените в калкулатора са без ДДС.</p>
+<p style="font-size:12px;">* Р¦РµРЅРёС‚Рµ РІ РєР°Р»РєСѓР»Р°С‚РѕСЂР° СЃР° Р±РµР· Р”Р”РЎ.</p>
 
-<p style="font-size:12px;">* В цената не са включени разходите, свързани с регистрация на МПС в КАТ, застраховки, такси, данъци и други допълнителни разходи, свързани с придобиването, собствеността и ползването на автомобила.</p>
+<p style="font-size:12px;">* Р’ С†РµРЅР°С‚Р° РЅРµ СЃР° РІРєР»СЋС‡РµРЅРё СЂР°Р·С…РѕРґРёС‚Рµ, СЃРІСЉСЂР·Р°РЅРё СЃ СЂРµРіРёСЃС‚СЂР°С†РёСЏ РЅР° РњРџРЎ РІ РљРђРў, Р·Р°СЃС‚СЂР°С…РѕРІРєРё, С‚Р°РєСЃРё, РґР°РЅСЉС†Рё Рё РґСЂСѓРіРё РґРѕРїСЉР»РЅРёС‚РµР»РЅРё СЂР°Р·С…РѕРґРё, СЃРІСЉСЂР·Р°РЅРё СЃ РїСЂРёРґРѕР±РёРІР°РЅРµС‚Рѕ, СЃРѕР±СЃС‚РІРµРЅРѕСЃС‚С‚Р° Рё РїРѕР»Р·РІР°РЅРµС‚Рѕ РЅР° Р°РІС‚РѕРјРѕР±РёР»Р°.</p>
 
-<p style="font-size:12px;">* За подробна информация и конкретна оферта, моля, свъжете се с нас на посочените телефони</p></div>
+<p style="font-size:12px;">* Р—Р° РїРѕРґСЂРѕР±РЅР° РёРЅС„РѕСЂРјР°С†РёСЏ Рё РєРѕРЅРєСЂРµС‚РЅР° РѕС„РµСЂС‚Р°, РјРѕР»СЏ, СЃРІСЉР¶РµС‚Рµ СЃРµ СЃ РЅР°СЃ РЅР° РїРѕСЃРѕС‡РµРЅРёС‚Рµ С‚РµР»РµС„РѕРЅРё</p></div>
 
 </body>
 
